@@ -1,0 +1,16 @@
+app:
+  covid-api-url: https://covid-api.mmediagroup.fr/v1
+  covid-cache-ttl: 15m
+
+feign:
+  client:
+    config:
+      covid19api:
+        connect-timeout: 5_000
+        read-timeout: 10_000
+        logger-level: full
+
+logging:
+  level:
+    com.accenture.covidassessment.clients: DEBUG
+    com.accenture.covidassessment.mock: DEBUG
